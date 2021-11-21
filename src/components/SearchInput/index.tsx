@@ -1,17 +1,20 @@
-import React, { FormEvent, useState } from 'react'
+import React, { FormEvent } from 'react'
 
 import { Button } from '../Button'
 import { FaSearch } from 'react-icons/fa'
 
 import { Container } from './styles'
+import { useWeather } from '../../hooks/useWeather'
 
 export const SearchInput: React.FC = () => {
-  const [city, setCity] = useState('')
+  const { city, setCity, searchCity } = useWeather()
 
   function handleOnSubmitForm (event: FormEvent) {
     event.preventDefault()
 
-    console.log(city)
+    if (!city) return
+
+    searchCity(city)
   }
 
   return (
