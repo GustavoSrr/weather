@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useState } from 'react'
 
 import { Button } from '../Button'
 import { FaSearch } from 'react-icons/fa'
@@ -7,14 +7,13 @@ import { Container } from './styles'
 import { useWeather } from '../../hooks/useWeather'
 
 export const SearchInput: React.FC = () => {
-  const { city, setCity, searchCity } = useWeather()
+  const { setCity } = useWeather()
+  const [inputValue, setInputValue] = useState('')
 
-  function handleOnSubmitForm (event: FormEvent) {
+  async function handleOnSubmitForm (event: FormEvent) {
     event.preventDefault()
 
-    if (!city) return
-
-    searchCity(city)
+    setCity(inputValue)
   }
 
   return (
@@ -24,7 +23,7 @@ export const SearchInput: React.FC = () => {
           type="search"
           required
           placeholder="Cidade"
-          onChange={event => setCity(event.target.value)}
+          onChange={event => setInputValue(event.target.value)}
         />
         <Button type="submit">
           <FaSearch size={15}/>
