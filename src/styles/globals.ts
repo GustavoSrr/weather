@@ -5,7 +5,8 @@ export const Globals = createGlobalStyle`
     --primaryColor: #A8A8A8;
     --primaryColorTransparent: #A8A8A815;
     --backgroundColor: white;
-    --textColor: #030303;
+    --textColor: #2E2E2E;
+    --secondTextColor: #6D6D6D;
   }
 
   body {
