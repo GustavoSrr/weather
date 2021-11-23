@@ -20,12 +20,24 @@ export const Container = styled.div`
 
       padding: 10px 10px;
 
-      border: 1px solid var(--primaryColor);
+      border: 1px solid var(--primaryColorTransparent);
       border-radius: 5px;
       background-color: transparent;
+      transition: 0.1s;
 
       &:focus {
         outline: 0;
+        border-color: var(--primaryColor);
+      }
+
+      &::-webkit-search-cancel-button {
+        height: 15px;
+        width: 15px;
+
+        -webkit-appearance: none;
+
+        border-radius: 50%;
+        background: url('https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg') no-repeat;
       }
     }
   }
