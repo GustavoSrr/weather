@@ -11,7 +11,8 @@ export const Container = styled.div`
 `
 
 export const CityInformation = styled.div`
-  width: fit-content;
+  width: 30%;
+  max-width: 100vw;
 
   display: flex;
   justify-content: left;
@@ -22,6 +23,18 @@ export const CityInformation = styled.div`
   border-radius: 5px;
   border: 1px solid var(--primaryColor);
   background-color: transparent;
+
+  @media only screen and (max-width: 1050px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 650px) {
+    width: 70%;
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 80%;
+  }
 `
 
 export const CityName = styled.div`
@@ -53,8 +66,6 @@ export const CityWeather = styled.div`
   display: flex;
   justify-content: space-between;
 
-  gap: 150px;
-
   margin-top: 20px;
 
   div {
@@ -68,6 +79,10 @@ export const CityWeather = styled.div`
     font-size: 40px;
     font-weight: 300;
     color: var(--secondTextColor);
+
+    @media only screen and (max-width: 650px) {
+      font-size: 30px;
+    }
   }
 
   p {
@@ -98,6 +113,10 @@ export const CityWeather = styled.div`
       height: 35px;
 
       fill: var(--primaryColor);
+
+      @media only screen and (max-width: 650px) {
+        height: 25px;
+      }
     }
   }
 `

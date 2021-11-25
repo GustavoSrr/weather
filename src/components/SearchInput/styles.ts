@@ -3,10 +3,14 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   margin-top: 80px;
 
   form {
-    width: 100%;
+    width: 30%;
 
     display: flex;
     align-items: center;
@@ -15,7 +19,7 @@ export const Container = styled.div`
     gap: 10px;
 
     input {
-      width: 30%;
+      width: 100%;
       height: 33px;
 
       padding: 10px 10px;
@@ -39,6 +43,18 @@ export const Container = styled.div`
         border-radius: 50%;
         background: url('https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg') no-repeat;
       }
+    }
+
+    @media only screen and (max-width: 1050px) {
+      width: 50%;
+    }
+
+    @media only screen and (max-width: 650px) {
+      width: 70%;
+    }
+
+    @media only screen and (max-width: 400px) {
+      width: 80%;
     }
   }
 `
