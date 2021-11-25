@@ -56,7 +56,6 @@ export const weatherContext = createContext({} as weatherContextType)
 
 export function WeatherProvider (props: weatherProviderProps) {
   const [city, setCity] = useState('')
-  // const [cityData, setCityData] = useState({} as apiResponseType)
 
   async function searchCity () {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pt_BR&appid=${import.meta.env.VITE_WEATHER_API}`
