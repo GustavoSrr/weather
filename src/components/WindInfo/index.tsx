@@ -15,7 +15,6 @@ export const WindInfo: React.FC = () => {
       const { data } = await searchCity()
 
       setCityInfo(data)
-      console.log(data)
     }
     effect()
   }, [0, city])
