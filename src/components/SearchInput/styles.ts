@@ -18,6 +18,8 @@ export const Container = styled.div`
 
     gap: 10px;
 
+    animation: formAnimation 0.3s;
+
     input {
       width: 100%;
       height: 33px;
@@ -57,4 +59,13 @@ export const Container = styled.div`
       width: 80%;
     }
   }
+
+  @keyframes formAnimation {
+  from {
+    margin-top: 50px;
+  };
+  to {
+    margin-top: 0px;
+  };
+}
 `

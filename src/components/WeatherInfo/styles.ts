@@ -22,6 +22,8 @@ export const CityInformation = styled.div`
   border: 1px solid var(--primaryColor);
   background-color: transparent;
 
+  animation: cityAnimation 0.2s;
+
   @media only screen and (max-width: 1050px) {
     width: 50%;
   }
@@ -32,6 +34,17 @@ export const CityInformation = styled.div`
 
   @media only screen and (max-width: 400px) {
     width: 80%;
+  }
+
+  @keyframes cityAnimation {
+    from {
+      opacity: 0%;
+      margin-top: 10px;
+    };
+    to {
+      opacity: 100%;
+      margin-top: 0px;
+    };
   }
 `
 
