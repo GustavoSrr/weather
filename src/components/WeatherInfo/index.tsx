@@ -29,7 +29,6 @@ export const WeatherInfo: React.FC = () => {
       const { data } = await searchCity()
 
       setCityInfo(data)
-      console.log(data.weather[0].main)
     }
     effect()
   }, [0, city])
@@ -73,7 +72,7 @@ export const WeatherInfo: React.FC = () => {
             </CityName>
             <CityWeather>
               <div>
-                <h2>{Math.floor(cityInfo.main.temp)}°</h2>
+                <h2>{Math.round(cityInfo.main.temp)}°</h2>
                 <p>{cityInfo.weather[0].description}</p>
               </div>
               <div id="WeatherIconDiv">
