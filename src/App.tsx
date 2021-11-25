@@ -3,10 +3,12 @@ import React from 'react'
 import { Header } from './components/Header'
 import { SearchInput } from './components/SearchInput'
 import { WeatherInfo } from './components/WeatherInfo'
+import { WindInfo } from './components/WindInfo'
 
 import { useWeather } from './hooks/useWeather'
 
 import { Globals } from './styles/globals'
+import { InfoContainer } from './styles/app'
 
 export const App: React.FC = () => {
   const { city } = useWeather()
@@ -17,7 +19,14 @@ export const App: React.FC = () => {
       <Header />
       <SearchInput />
       {
-        city ? <WeatherInfo /> : ''
+        city
+          ? (
+            <InfoContainer>
+              <WeatherInfo />
+              <WindInfo />
+            </InfoContainer>
+            )
+          : ''
       }
     </div>
   )
