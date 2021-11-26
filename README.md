@@ -9,7 +9,7 @@
   2. [Ideia](#-ideia)
   3. [Como funciona](#-como-funciona)
   4. [Veja o projeto](#-teste-o-projeto)
-  5. [Instalação](#-quer-instalar)
+  5. [Instalação](#-instalação)
 
 ## 📡 Tecnologias
 
